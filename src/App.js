@@ -3,6 +3,7 @@ import Grid from './components/Layout/Grid'
 import FullWidthSection from './components/Layout/FullWidthSection'
 import MaxWidthSection from './components/Layout/MaxWidthSection'
 import Row from './components/Layout/Row'
+import img from './assets/images/_GEO0029-10.jpg'
 
 function App() {
   return (
@@ -15,11 +16,19 @@ function App() {
         </Nav>
       </Header>
       <Content as = "main">
-        <Row>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus atque officiis deserunt minus. 
-          Expedita nam similique eligendi earum, tenetur nisi.</p>
-        </Row>
+        <Grid>
+            
+            <img src={img} alt="toy"/>
+            <img src={img} alt="toy"/>
+            <img src={img} alt="toy"/>
+        </Grid>
+        
       </Content>
+
+      
+      
+
+
     </Grid>
   );
 }
@@ -34,7 +43,7 @@ const Header = styled(FullWidthSection)`
 
 `
 
-const Nav =styled(Row)`
+const Nav =styled.p`
   a{
     margin-right:1rem;
   }
@@ -42,7 +51,20 @@ const Nav =styled(Row)`
 `
 
 const Content = styled(MaxWidthSection)`
-  padding: 10rem 5rem;
+  padding:20rem 2rem;
   background-color:lightblue;
+  img{
+    width:21rem;
+    @media (max-width:1200px) {
+      width:18rem;
+    }
+  
+  }
+
+
+`
+
+const Paragraph = styled(Row)`
+padding-top:1rem;
 
 `
